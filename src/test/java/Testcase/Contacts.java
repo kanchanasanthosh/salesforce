@@ -109,7 +109,6 @@ public class Contacts {
 	}
 	@Test
 	public static void viewContact29() throws InterruptedException {
-		//error222222222222222222222222222222222222222222222222222222222222
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
