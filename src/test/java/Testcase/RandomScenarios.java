@@ -165,7 +165,7 @@ public class RandomScenarios {
 	}
 	
 
-	public static void blockEvent() throws InterruptedException {
+	public static void blockEvent37() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();

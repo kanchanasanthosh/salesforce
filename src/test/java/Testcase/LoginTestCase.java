@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginTestCase {
-	
+	@Test
 	public static void Error_login_salesforece1() {
 		String expected="Please enter your password.";
 		WebDriverManager.chromedriver().setup();
@@ -42,7 +42,7 @@ public class LoginTestCase {
 		String actual=driver.findElement(By.id("error")).getText();
 		if(actual.equalsIgnoreCase(expected))
 		{
-			System.out.println("Error_login_salesforece script passed");
+			System.out.println("Error_login_salesforece script passed"+actual);
 		}
 		else {
 			System.out.println("Error_login_salesforece script failed");
@@ -97,7 +97,7 @@ public class LoginTestCase {
 		System.out.println(actual);
 		driver.close();
 	}
-	
+	@Test
 	public static void checkUsernameTest5() throws InterruptedException {
 		String expected = "kanchana santhosh";
 	
@@ -141,7 +141,7 @@ public class LoginTestCase {
 		System.out.println("message posted");
 		driver.close();
 	}
-	
+	@Test
 	public static void editprofile() throws InterruptedException, AWTException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
@@ -216,11 +216,11 @@ public class LoginTestCase {
        Thread.sleep(2000);
        driver.findElement(By.id("publishersharebutton")).click();
        Thread.sleep(3000);
-      
+      System.out.println("file uploaded");
 		driver.close();
 		
 	}
-	
+	@Test
 	public static void addPhoto() throws InterruptedException, AWTException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
@@ -237,7 +237,7 @@ public class LoginTestCase {
 		usermenu.click();
 		WebElement myprofile = driver.findElement(By.xpath("//*[@id=\"userNav-menuItems\"]/a[1]"));
 		myprofile.click();
-		
+		Thread.sleep(3000);
 		driver.findElement(By.id("displayBadge")).click();
 		Thread.sleep(2000);
 		WebElement frame2 = driver.findElement(By.id("uploadPhotoContentId"));

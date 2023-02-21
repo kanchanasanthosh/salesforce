@@ -39,7 +39,7 @@ public class Contacts {
 		
 	}
 	
-	public static void createviewpage() throws InterruptedException {
+	public static void createviewpage26() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();

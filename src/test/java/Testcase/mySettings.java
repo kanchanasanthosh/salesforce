@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class mySettings {
+	@Test
 	public static void usermenudropdown() throws InterruptedException {
 	
 	WebDriverManager.chromedriver().setup();
